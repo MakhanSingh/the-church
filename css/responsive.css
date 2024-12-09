@@ -1,0 +1,193 @@
+/*==================== Media Queries for all the devices ====================*/
+
+@media (max-width:1550px) {
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- About Us Section ----------*/
+    #ms-about-sec .ms-bg {
+        margin-left: 4%
+    }
+    /*---------- Our Values Section ----------*/
+    .ms-floating-img-one, .ms-floating-img-two, .ms-floating-img-three, .ms-floating-img-four {
+        display: none;
+    }
+    /*---------- Latest Sermons Section ----------*/
+    #ms-sermon-sec {
+        background-size: 80%;
+    }
+    /*----- Gallery Section -----*/
+    #ms-gallery-sec .owl-stage-outer ~ .owl-nav {
+        top: -190px;
+    }
+}
+
+@media (max-width:1320px) {
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- About Us Section ----------*/
+    #ms-about-sec .ms-bg {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:1100px) {
+    /*==================== 01. General CSS ====================*/    
+    /*========== b. Header Section CSS ==========*/
+    header {
+        padding:20px 0;
+    }
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Upcoming Events Section ----------*/
+    #ms-events-sec {
+        padding-bottom: 50px;
+    }
+    /*---------- Latest Sermons Section ----------*/
+    #ms-sermon-sec {
+        background-size: cover;
+    }
+    /*==================== 06. Upcoming Events Page CSS ====================*/
+    .ms-event-list-box .ms-meta-field {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:900px) {
+    /*==================== 01. General CSS ====================*/    
+    /*========== a. Global CSS ==========*/
+    .ms-sec-pad {
+        padding: 60px 0;
+    }
+    /*========== b. Header Section CSS ==========*/
+    header ul#ms-header-menu {
+        background: #fff;
+        padding: 10px 0px 30px 0px;
+    }
+    header ul#ms-header-menu li a {
+        color:#333;
+    }
+    header ul li:last-child {
+        margin-top: 10px;
+    }
+    header nav .ms-dropdown-menu {
+        position: absolute;
+        top: 60px;
+        z-index: 9;
+        left: 0;
+        width: 100%;
+    }
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Our Values Section ----------*/
+    .ms-our-value-box {
+        padding: 20px;
+    }
+    /*---------- About Us Section ----------*/
+    #ms-about-sec a ~ div {
+        margin-bottom: 50px;
+    }
+    .ms-spacer-60 {
+        height: 0;
+    }
+    /*----- Testimonials Section -----*/
+    .ms-reviewer-img {
+        padding-right: 20px;
+    }
+    /*----- Gallery Section -----*/
+    #ms-gallery-sec .owl-stage-outer ~ .owl-nav {
+        top: -90px;
+    }
+    /*==================== 02. About page CSS ====================*/
+    /*----- Our Visions Section -----*/
+    .ms-abt-vision-box .ms-abt-vision-inr-txt {
+        padding: 20px;
+    }
+    /*----- Our Team Section -----*/
+    .ms-abt-team-box {
+        padding: 0;
+    }
+    /*==================== 06. Upcoming Events Page CSS ====================*/
+    .ms-filter-form .ms-primary-btn {
+        padding:10px;
+    }
+}
+
+@media (max-width:550px) {
+    /*==================== 01. General CSS ====================*/  
+    /*========== a. Global CSS ==========*/
+    h1 {
+        font-size:36px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 16px;
+    }
+    .ms-sec-pad {
+        padding: 50px 0;
+    }
+    /*========== c. Footer Section CSS ==========*/
+    footer {
+        padding: 60px 0 30px;
+    }
+    footer .ms-recent-post-col img {
+        width: 100%;
+    }
+    footer .ms-col-one, 
+    footer .ms-col-two,
+    footer .ms-col-three {
+        margin-bottom: 30px;
+    }
+    /*==================== 02. Homepage CSS ====================*/
+    /*---------- Banner Section ----------*/
+    #ms-bnr-sec {
+        padding: 160px 0 100px;
+    }
+    /*---------- Our Values Section ----------*/
+    .ms-our-value-box.ms-border {
+        border: none;
+    }
+    /*---------- About Us Section ----------*/
+    #ms-about-sec .ms-bg {
+        height: 360px;
+    }
+    /*---------- Upcoming Events Section ----------*/
+    #ms-events-sec {
+        padding-bottom: 130px;
+    }
+    #ms_events .owl-nav {
+        bottom: -15%;
+        top: inherit;
+    }
+    /*----- Testimonials Section -----*/
+    .ms-reviewer-img {
+        padding-right: 50%;
+        padding-bottom: 25px;
+    }
+    /*==================== 02. About page CSS ====================*/
+    /*----- Our Visions Section -----*/
+    .ms-abt-vision-box {
+        margin-bottom: 30px;
+    }
+    /*----- Our Team Section -----*/
+    .ms-abt-team-box img {
+        width: 70%;
+    }
+    .ms-abt-team-box {
+        padding-bottom: 35px;
+    }
+
+    /*==================== 08. Events Detail Page CSS ====================*/
+    .ms-event-list li .ms-check-icon {
+        font-size: 15px;
+        margin-right: 12px;
+    }
+    .ms-featured-events-box .ms-featured-content {
+        padding: 20px;
+    }
+
+    /*==================== 09. Gallery 3 Column Page CSS ====================*/
+    .ms-img-title {
+        margin-bottom: 25px;
+    }
+}

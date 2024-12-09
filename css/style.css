@@ -1,0 +1,997 @@
+@charset "UTF-8";
+/*====================================================== 
+@Template Name: Church
+@Author: Daat Creations
+@Developed By: Manavjot Singh
+@Author URL: http://www.daatcreations.com/ 
+
+====================Table Of Contents===================
+
+01. General CSS
+    a. Global CSS
+    b. Header Section
+    c. Footer Section
+    d. Pagination Section
+    d. Preloader CSS
+02. Home Page CSS
+03. About Page CSS
+04. Contact Page CSS
+05. Sermons Grid & List Page CSS
+06. Upcoming Events Page CSS
+07. Events Masonry Page CSS
+08. Events Detail Page CSS
+09. Gallery 3 Column Page CSS
+
+========================================================*/
+
+/*==================== 01. General CSS ====================*/
+
+/*========== a. Global CSS ==========*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    color:#515151;    
+}
+#home-page {
+    background-color: #f6f3ec;
+}
+.overflow-hidden {
+    overflow:hidden;
+}
+.btn,
+button,  
+a:focus, 
+.btn:hover, 
+.btn:focus, 
+button:hover, 
+button:focus,
+input:focus,
+textarea:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+a:hover {
+    text-decoration: none;
+    color:#005260;
+}
+h1 {
+    font-size:55px;
+    line-height: 1.1;
+}
+h2 {
+    font-weight: bold;
+    color:#005260;
+    line-height: 1.5;
+}
+h3 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+h4 {
+    font-size: 24px;
+    line-height: 1.5;
+} 
+h5 {
+    font-size:22px;
+    line-height: 1.5;
+}
+h6 {
+    font-size: 18px;
+    line-height: 1.5;
+    color:rgba(255,255,255,0.8);
+}
+p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+.ms-font-20 {
+    font-size: 20px;
+}
+.ms-font-14 {
+    font-size: 14px;
+}
+.ms-spacer-30,
+.ms-spacer-60 {
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.ms-spacer-30 {
+    height: 30px;
+}
+.ms-spacer-60 {
+    height: 60px;
+}
+.ms-theme-color {
+    color: #005260;
+}
+.ms-theme-color-light {
+    color: #c3b59b;
+}
+.ms-primary-btn, 
+.ms-secondary-btn {
+    font-size: 18px;
+    font-weight: bold;    
+    transition: 0.3s all linear;
+    -webkit-transition:  0.3s all linear;
+    -moz-transition:  0.3s all linear;
+    -o-transition:  0.3s all linear;
+    padding:10px 35px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.ms-primary-btn {
+    background: #c3b59b;
+    color: #005260;
+    border: 1px solid #c3b59b;
+}
+.ms-primary-btn:hover {
+    background: #005260;
+    color: #fff;
+    border: 1px solid #005260;
+}
+.ms-secondary-btn {
+    background: transparent;
+    border: 1px solid #c3b59b;
+    font-size: 14px;
+}
+.ms-anchor-btn {
+    color: #c3b59b;
+    font-size:13px;
+    font-weight: 600;
+    transition: 0.3s all linear;
+}
+.ms-sec-pad {
+    padding:100px 0;
+}
+
+/*========== b. Header Section CSS ==========*/
+header {
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 20px 30px;
+}
+header nav ul .nav-item {
+    margin: 0 20px;
+    padding: 4px 0;
+}
+header nav ul .nav-item:last-child {
+    margin-right: 0;
+}
+header nav ul li a {
+    color: #fefefe;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    -webkit-transition:  all 0.3s linear;
+    font-weight: 600;
+}
+header nav ul li a:hover {
+    color:#c3b59b;
+}
+header .navbar-nav li.dropdown .dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    font-weight: 600;
+}
+header .navbar-nav li.dropdown .dropdown-menu .dropdown-item:hover {
+    background: #c3b59b;
+    color: #005260;
+}
+header .navbar-nav li.dropdown .dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    box-shadow: 1px 0px 7px 0px rgba(22, 43, 70, 0.1);
+    transition: all 300ms linear 0s;
+    -webkit-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+    padding: 0;
+}
+header nav ul li.dropdown {
+    backface-visibility: hidden;
+}
+header .navbar-nav li:hover.dropdown .dropdown-menu {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+}
+header .navbar-nav li.dropdown .dropdown-menu {
+    top: 50px;
+}
+header .dropdown-toggle::after {
+    position: absolute;
+    top: 15px;
+}
+@media (min-width: 991px) {
+    header .navbar-nav li.dropdown .dropdown-menu {
+        display: block;
+        min-width: 150px;
+    }
+}
+header .ms-header-btn {
+    font-size: 14px;
+    padding: 10px 28px;
+}
+@media (max-width:900px) {
+    .ms-inner-header-bg nav .ms-dropdown-menu {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 100%;
+        z-index: 99;
+    }
+}
+
+/*---------- hamburger menu css ----------*/
+.navbar-toggler:focus {
+    outline: none;
+}
+.menu_toggle {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}  
+.menu_toggle .hamburger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.menu_toggle .hamburger span, 
+.menu_toggle .hamburger-cross span {
+    background: #fff;
+}
+.menu_toggle .hamburger span {
+    width: 0%;
+    height: 2px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 4px 0;
+    display: block;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.menu_toggle .hamburger span:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.menu_toggle .hamburger span:nth-child(2) {
+    -webkit-transition-delay: .125s;
+    -o-transition-delay: .125s;
+    transition-delay: .125s;
+}
+.menu_toggle .hamburger span:nth-child(3) {
+    -webkit-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+.menu_toggle .hamburger-cross {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+}
+.menu_toggle .hamburger-cross span {
+    display: block;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.menu_toggle .hamburger-cross span:nth-child(1) {
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.menu_toggle .hamburger-cross span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    -webkit-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+.collapsed .menu_toggle .hamburger span {
+    width: 100%;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(1) {
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(2) {
+    -webkit-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(3) {
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+}
+.collapsed .menu_toggle .hamburger-cross span:nth-child(1) {
+    height: 0%;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.collapsed .menu_toggle .hamburger-cross span:nth-child(2) {
+    width: 0%;
+    -webkit-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+/*---------- Inner page header css ----------*/
+header.ms-inner-header-bg {
+    background: url('../images/inner-hdr.jpg') center no-repeat;
+}
+
+/*========== c. Footer Section CSS ==========*/
+footer {
+    background: #002b32;
+    padding: 100px 0 50px;
+    color: #97a3a5;
+    margin-top: -1px;
+}
+footer p {
+    font-size: 14px;
+    color: #97a3a5;
+}
+footer a {
+    color: #97a3a5;
+    transition: 0.3s all linear;
+}
+footer a:hover {
+    color:#fff;
+}
+footer .ms-small-txt {
+    font-size: 12px;
+    color: rgba(151, 163, 165, 0.7);
+}
+footer .ms-comment-link {
+    color: #c3b59b;
+}
+footer .ms-recent-post-col {
+    padding-right: 50px;
+}
+footer form input {
+    width: 100%;
+    position: relative;
+    background: #18383f;
+    border: none;
+    font-size: 13px;
+    padding:15px;
+    color: #fff;
+}
+footer ::placeholder {
+    color:rgba(151, 163, 165, 0.5);
+}
+footer form button {
+    position: absolute;
+    right:15px;
+    border: none;
+    background: #c3b59b;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.3s all linear;
+}
+footer form button:hover {
+    background: #005260;
+}
+footer form input:focus {
+    outline:0;
+}
+footer .ms-footer-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+footer .ms-footer-bottom {
+    border-top: 1px solid #183c42;
+    margin-top: 70px;
+    padding-top: 25px;
+}
+footer .ms-footer-bottom span {
+    font-size: 15px;
+}
+
+/*========== d. Pagination Section ==========*/
+.ms-pagination li a {
+    width: 45px;
+    height: 45px;
+    background: #c3b59b;
+    color: #005260;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50% !important;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: 0.3s all linear;
+}
+.ms-pagination li a:hover, 
+.ms-pagination li a.active {
+    background: #005260;
+    color: #fff;
+}
+
+/*========== e. Preloader CSS==========*/
+/* .preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color:#fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../images/loader.gif');
+} */
+
+/*==================== 02. Homepage CSS ====================*/
+/*---------- Banner Section ----------*/
+#ms-bnr-sec  {
+    background: url('../images/bnr-img.jpg') center;
+    background-size: cover;
+    padding: 300px 0 150px;
+}
+
+/*---------- Our Values Section ----------*/
+.ms-our-value-box {
+    padding:20px 35px;
+}
+.ms-our-value-box.ms-border {
+    border-left: 1px solid #e5e3dd;
+    border-right: 1px solid #e5e3dd;
+}
+.ms-divider {
+    width: 70px;
+    height: 1px;
+    background: #c8bba2;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.ms-floating-img-one,
+.ms-floating-img-two,
+.ms-floating-img-three,
+.ms-floating-img-four {
+    position: absolute;
+    box-shadow: 0px 10px 46px 0px rgba(0, 0, 0, 0.15);
+    z-index: 9;
+}
+.ms-floating-img-one {   
+    top: -12%;
+    left: 28%;
+}
+.ms-floating-img-two {   
+    top: -8%;
+    right: 5%;
+}
+.ms-floating-img-three {   
+    left: 3%;
+    bottom: -12%;
+}
+.ms-floating-img-four {   
+    bottom: -5%;
+    right: 13%;
+}
+
+/*---------- About Us Section ----------*/
+#ms-about-sec .ms-bg {
+    background: #e9e4d8;
+    height: 420px;
+    margin-left: 9%;
+}
+#ms-about-sec .container {
+    margin-top: -320px;
+}
+.ms-abt-img-bg {
+    height: 400px;
+    position: relative;
+}
+.ms-abt-img-bg.ms-img-one {
+    background: url('../images/abt-img-1.jpg') center no-repeat;        
+}
+.ms-abt-img-bg.ms-img-two {
+    background: url('../images/abt-img-2.jpg') center no-repeat;        
+}
+.ms-abt-img-bg .ms-abt-img-bg-inr-text {
+    background: #fff;
+    padding: 35px;
+    margin-left: 90px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*---------- Upcoming Events Section ----------*/
+.ms-img-area .ms-img-area-txt {
+    position: absolute;
+    bottom: 0;
+    padding: 25px 25px 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ms-content-area .ms-seperator {
+    background: #edeeee;
+    width: 65%;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.ms-events-box .ms-content-area {
+    background: #fff;
+    padding: 25px 25px 20px;
+}
+.ms-content-area p {
+    color:#53555c;
+    font-size: 13px;
+}
+#ms_events img {
+    display: inline-block !important;
+    width: auto !important;
+}
+#ms_events .owl-nav {
+    position: absolute;
+    top: -18%;
+    right: 0;
+}
+#ms_events.owl-carousel .owl-stage-outer {
+    height: 430px;
+}
+.ms-events-box {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.ms-events-box .ms-overlay {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.ms-events-box:hover .ms-overlay {
+    opacity: 1;
+}
+.ms-events-box:hover {
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
+}
+
+/*---------- Latest Sermons Section ----------*/
+#ms-sermon-sec {
+    background: url('../images/Latest-Sermons-bg-img.jpg') no-repeat;
+    background-size: 60%;
+    background-position: center right;
+}
+#ms-sermon-sec .ms-inner-box {
+    background: #fff;
+    box-shadow: 0px 10px 46px 0px rgba(0, 0, 0, 0.1);
+}
+#ms-sermon-sec .ms-inner-box h2 {
+    padding:35px 38px 0px 38px;
+}
+.ms-sermons {
+    padding:30px 38px;
+    border-bottom: 1px solid #edeeee;
+}
+.ms-sermons.ms-no-border {
+    border-bottom: 0px solid #edeeee;
+}
+.ms-sermons .ms-meta {
+    color:#53555c;
+    font-size:14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+#ms-sermon-sec .owl-carousel .owl-item img {
+    width: auto;
+}
+.owl-nav {
+    text-align: left !important;
+}
+.owl-nav button {
+    width: 50px;
+    height: 50px;
+    background: #d0c4af !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    transition: 0.3s all linear;
+}
+.owl-nav button:hover {
+    background-color: #515151 !important;
+}
+.owl-nav button span {
+    font-size:37px;
+    position: relative;
+    bottom: 7px;
+}
+
+/*----- Testimonials Section -----*/
+.ms-review-box {
+    background: url('../images/quote-icon.png') no-repeat;
+    background-position: 22% 36%;
+}
+.ms-reviewer-img {
+    padding-right: 70px;
+}
+.ms-reviewer-img img {
+    border-radius: 50%;
+}
+.ms-reviewer-name {
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    padding-top: 5px;
+    margin-top: 40px;
+}
+.ms-reviewer-name:before {
+    content: '';
+    width: 100px;
+    height: 2px;
+    background: #005260;
+    position: absolute;
+    top: 0;
+}
+#ms-testimonial-sec .owl-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/*----- Gallery Section -----*/
+#ms-gallery-sec .owl-stage-outer ~ .owl-nav {
+    position: relative;
+    top: -280px;
+    margin-top: -50px;
+}
+#ms-gallery-sec button.owl-next {
+    position: absolute;
+    right: 0;
+}
+
+/*==================== 03. About Page CSS ====================*/
+/*----- Banner Section -----*/
+.ms-play-btn {
+    position: absolute;
+    top: 41%;
+    left: 46%;
+    animation: animate 1.5s linear infinite;
+    border-radius: 50%;
+}
+@keyframes animate {
+    0% {
+        box-shadow: 0 0 0 0 rgb(255 109 74 / 70%), 0 0 0 0 rgb(255 109 74 / 70%);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgb(255 109 74 / 70%), 0 0 0 20px rgb(255 109 74 / 0%);
+    }
+}
+/*----- Our Visions Section -----*/
+#ms-abt-vision-sec {
+    border-top: 1px solid #dbd7d6;
+}
+.ms-abt-vision-box {
+    background: #fff;
+    transition: 0.3s all linear;
+}
+.ms-abt-vision-box .ms-abt-vision-inr-txt {
+    padding: 30px;
+    border: 1px solid #dbd7d6;
+    transition: 0.3s all linear;
+}
+.ms-abt-vision-box h5 {
+    font-size: 20px;
+}
+.ms-abt-vision-box p {
+    font-size: 14px;
+}
+.ms-abt-vision-box:hover {
+    background: #005260;
+    color: #fff;
+}
+.ms-abt-vision-box:hover .ms-abt-vision-inr-txt {
+    border: 1px solid #005260;
+}
+/*----- Our Team Section -----*/
+#ms-abt-team-sec {
+    background: #e2e8e5;
+}
+#ms-abt-team-sec img {
+    border-radius: 50%;
+    border: 7px solid #fff;
+}
+.ms-abt-team-box {
+    padding:0 30px;
+}
+
+/*==================== 04. Contact Page CSS ====================*/
+#ms-contact-page .ms-border-right {
+    border-right: 1px solid #dbd7d6;
+}
+#ms-contact-page .ms-bottom-pad {
+    padding-bottom: 40px;
+}
+#ms-contact-page .ms-left-pad {
+    padding-left: 30px;
+}
+.ms-social-icon {
+    width: 40px !important;
+    height: 40px;
+    color: #fff;
+    padding: 11px;
+    border-radius: 50%;
+    transition: 0.3s all linear;
+    margin-right: 3px;
+}
+.ms-social-icon.ms-fb-icon {
+    background: #3b5a9a;
+}
+.ms-social-icon.ms-li-icon {
+    background: #1379b7;
+}
+.ms-social-icon.ms-tw-icon {
+    background: #26acdf;
+}
+.ms-social-icon:hover {
+    background: #c3b59b;
+}
+.ms-contact-form input, 
+.ms-contact-form textarea {
+    border-radius: 0;
+    background: transparent;
+}
+.ms-contact-form ::placeholder {
+    font-size: 14px;
+}
+form input:focus, 
+form textarea:focus {
+    border: 1px solid #005260 !important;
+}
+#ms-map-sec iframe {
+    width: 100%;
+    height: 500px;
+    margin-bottom: -6px;
+}
+
+/*==================== 05. Sermons Grid & List Page CSS ====================*/
+.ms-sermon-grid-box {
+    border: 1px solid #d7d3d2;
+    transition: 0.3s all linear;
+    margin-bottom: 40px;
+}
+.ms-sermon-grid-box .ms-meta {
+    font-size: 14px;
+}
+.ms-sermon-grid-box .ms-sermon-content {
+    padding: 30px;
+}
+.ms-sermon-grid-box .ms-sermon-grid-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #d7d3d2;
+}
+.ms-sermon-grid-box:hover {
+    box-shadow: 0px 23px 59px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #fff;
+}
+.ms-sermon-grid-box .ms-sermon-grid-title {
+    line-height: 1.35;
+    margin-top: 5px;
+}
+.ms-sermon-list-view {
+    margin-bottom: 50px;
+}
+
+/*==================== 06. Upcoming Events Page CSS ====================*/
+.ms-events-filter {
+    background: #eae9e8;
+    padding: 30px;
+    margin-bottom: 70px;
+}
+.ms-filter-form ::placeholder {
+    font-size: 14px;
+}
+.ms-filter-form input {
+    padding: 12px;
+    border-radius: 0;
+}
+.ms-filter-form label {
+    font-size: 17px;
+    font-weight: bold;
+}
+.ms-event-list-box {
+    margin-bottom: 60px;
+}
+.ms-event-list-box .ms-meta-field {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.ms-event-list-box .ms-meta-field div:first-child {
+    margin-bottom: 6px
+}
+
+/*==================== 07. Events Masonry Page CSS ====================*/
+.ms-event-masonry-box {
+    border: 1px solid #dbd7d6;
+    transition: 0.3s all linear;
+    margin-bottom: 40px;
+}
+.ms-event-masonry-box .ms-masonry-content {
+    padding: 60px 30px 30px 30px;
+}
+.ms-event-masonry-box .ms-meta-date {
+    background: #c3b59b;
+    padding: 0 25px 10px;
+    top: -40px;
+    border: 4px solid #fff;
+}
+.ms-event-masonry-box h3 {
+    font-size: 34px;
+    margin-bottom: -8px !important;
+}
+.ms-event-masonry-box h6 {
+    font-size: 13px;
+}
+.ms-event-masonry-box:hover {
+    box-shadow: 0px 23px 59px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #fff;
+}
+
+/*==================== 08. Events Detail Page CSS ====================*/
+.ms-event-list {
+    padding: 0;
+    list-style-type: none;
+}
+.ms-event-list li {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+}
+.ms-event-list li:last-child {
+    border-bottom: 0px solid #e1e1e1;
+}
+.ms-event-list li .ms-check-icon {
+    font-size: 13.5px;
+    margin-right: 20px;
+}
+.ms-join-event-form ::placeholder {
+    font-size: 14px;
+}
+.ms-join-event-form input,
+.ms-join-event-form textarea {
+    padding:10px 15px;
+}
+.ms-featured-sec {
+    background: #e8e7e5;
+}
+.ms-featured-events-box .ms-featured-content {
+    background: #fff;
+    padding: 30px;
+}
+.ms-featured-events-box .ms-featured-content .ms-meta-field {
+    margin-top:25px;
+    margin-bottom: 45px;
+}
+.ms-featured-events-box .ms-featured-content .ms-featured-title {
+    line-height: 1.3;
+}
+
+/*==================== 09. Gallery 3 Column Page CSS ====================*/
+.img-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+.img-overlay {
+    background: rgba(0, 82, 96, 0.9);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    padding: 80px;
+}
+#overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#overlay img {
+    margin: 0;
+    width: 80%;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    padding: 5%;
+}
+@media screen and (min-width: 768px) {
+    #overlay img {
+        width: 60%;
+    }
+    #nextButton,
+    #prevButton {
+        font-size: 3em;
+    }
+    #exitButton {
+        font-size: 3em;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #overlay img {
+        width: 50%;
+    }
+}  
+#nextButton, 
+#prevButton {
+    color: #fff;
+    font-size: 2em;
+    transition: opacity 0.1s;
+    cursor: pointer;
+}
+#nextButton:hover,
+#prevButton:hover {
+    opacity: 0.3;
+}
+#exitButton {
+    color: #fff;
+    font-size: 2em;
+    transition: opacity 0.1s;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+#exitButton:hover {
+    opacity: 0.3;
+}
+.ms-img-title {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
